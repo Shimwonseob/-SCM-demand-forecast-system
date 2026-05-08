@@ -1,0 +1,10 @@
+streamlit==1.57.0
+pandas
+numpy
+plotly
+statsmodels
+pmdarima
+prophet
+xgboost
+openpyxl
+kaleido

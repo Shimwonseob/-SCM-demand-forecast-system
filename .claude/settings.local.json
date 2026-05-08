@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Get-ChildItem -Recurse | Where-Object { -not $_.PSIsContainer } | Select-Object FullName | Sort-Object FullName)",
+      "PowerShell(python -c \"import pmdarima; print\\('pmdarima version:', pmdarima.__version__\\)\")",
+      "PowerShell(python -u \"test_speed.py\" 2>&1)",
+      "PowerShell(findstr *)",
+      "PowerShell(python -c \"import prophet; print\\('prophet:', prophet.__version__\\)\")",
+      "PowerShell(python -c \"import xgboost; print\\('xgboost:', xgboost.__version__\\)\")",
+      "PowerShell(python -W ignore validate_p3.py 2>&1)",
+      "PowerShell(python -c \"import statsmodels; print\\('statsmodels:', statsmodels.__version__\\); import scipy; print\\('scipy:', scipy.__version__\\)\")",
+      "PowerShell(python -W ignore validate_p2.py 2>&1 | Select-String -Pattern \"^\\\\[|^    \" | ForEach-Object { $_.Line })",
+      "PowerShell(python -W ignore validate_p4.py 2>&1 | Select-String -Pattern \"^\\\\[|^    \" | ForEach-Object { $_.Line })",
+      "PowerShell($files = Get-ChildItem \"C:\\\\Users\\\\simwo\\\\OneDrive\\\\Desktop\\\\수요예측시스템\\\\SCM_Claude Code\\\\pages\"; foreach \\($f in $files\\) { Write-Output $f.Name })",
+      "PowerShell(Get-Content \"C:\\\\Users\\\\simwo\\\\OneDrive\\\\Desktop\\\\수요예측시스템\\\\SCM_Claude Code\\\\run.bat\" | ForEach-Object { $_ })",
+      "PowerShell(python -c \"from pathlib import Path; p = Path\\('C:/Users/simwo/OneDrive/Desktop/수요예측시스템/SCM_Claude Code/전자상거래_수요예측_샘플 \\(5\\).xlsx'\\); print\\('존재:', p.exists\\(\\)\\); print\\('크기:', p.stat\\(\\).st_size, 'bytes'\\)\")",
+      "PowerShell([System.IO.Path]::GetFullPath\\(\"C:\\\\Users\\\\simwo\\\\OneDrive\\\\Desktop\\\\수요예측시스템\\\\SCM_Claude Code\\\\pages\\\\4_시나리오분析.py\"\\))",
+      "PowerShell($files = Get-ChildItem \"C:\\\\Users\\\\simwo\\\\OneDrive\\\\Desktop\\\\수요예측시스템\\\\SCM_Claude Code\\\\pages\"; foreach \\($f in $files\\) { Write-Host \\($f.Name | Format-Hex -Encoding Unicode | Out-String\\) })",
+      "PowerShell(git init *)"
+    ]
+  }
+}
